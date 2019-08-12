@@ -8,7 +8,10 @@
     "build": "yarn workspace example build"
   },
   "workspaces": [
-    "gatsby-theme-minimal",
+    "gatsby-theme-macklinu-portfolio",
     "example"
-  ]
+  ],
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
 }
