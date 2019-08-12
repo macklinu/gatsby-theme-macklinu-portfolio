@@ -1,9 +1,10 @@
 {
   "name": "gatsby-theme-macklinu-portfolio",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "main": "index.js",
   "author": "Mackie Underdown <macklinu@gmail.com>",
   "license": "MIT",
+  "repository": "macklinu/gatsby-theme-macklinu/portfolio",
   "peerDependencies": {
     "gatsby": "^2.6.0"
   },

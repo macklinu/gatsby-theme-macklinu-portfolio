@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { WorkCard } from './work-card'
-import { Layout } from './layout'
+import WorkCard from './work-card'
+import Layout from './layout'
 import { Styled } from '../lib/styled'
 
 export default props => {

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { Styled } from '../lib/styled'
-import { PostCard } from '../components/post-card'
-import { WorkCard } from '../components/work-card'
-import { Layout } from './layout'
-import { Hello } from './hello'
+import PostCard from '../components/post-card'
+import WorkCard from '../components/work-card'
+import Layout from './layout'
+import Hello from './hello'
 
 export default ({ data }) => {
   return (

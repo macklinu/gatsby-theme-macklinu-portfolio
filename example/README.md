@@ -1,6 +1,5 @@
-# Gatsby Theme Minimal Example
+# gatsby-theme-macklinu-portfolio Example
 
 A usage of
-[gatsby-theme-minimal](https://github.com/ChristopherBiscardi/gatsby-theme-minimal)
-that does nothing but use the theme. As a result you will see `Error: Missing resources for /` when navigating to `localhost:8000`. To get
-rid of that, create a page in `src/pages/index.js`.
+[gatsby-theme-macklinu-portfolio](https://github.com/macklinu/gatsby-theme-macklinu-portfolio)
+that does nothing but use the theme. This is basically a boiled down version of https://mackie.world that I use for testing while developing the theme styles and Gatsby configurations.

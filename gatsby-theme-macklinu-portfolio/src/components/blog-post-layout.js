@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Styled } from 'gatsby-theme-macklinu-portfolio'
 import Img from 'gatsby-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { Layout } from './layout'
+import { Styled } from '../lib/styled'
+import Layout from './layout'
 
 export default props => {
   let { title, date, bannerImage } = props.data.mdx.frontmatter

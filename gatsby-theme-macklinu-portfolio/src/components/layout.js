@@ -42,7 +42,7 @@ let NavLink = props => (
   />
 )
 
-export let Layout = ({ children }) => {
+export default ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
       avatar: file(absolutePath: { regex: "/mackie-face.png/" }) {

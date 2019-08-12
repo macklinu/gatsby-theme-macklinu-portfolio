@@ -2,7 +2,7 @@ import React from 'react'
 import Img from 'gatsby-image'
 import cx from '@macklinu/cx'
 
-export let Card = ({ fluid, title, date, excerpt }) => (
+export default ({ fluid, title, date, excerpt }) => (
   <div
     className={cx(
       'max-w-sm rounded overflow-hidden',

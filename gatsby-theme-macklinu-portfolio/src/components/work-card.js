@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { Card } from './card'
 import cx from '@macklinu/cx'
+import Card from './card'
 
-export let WorkCard = ({ work, className, ...props }) => (
+export default ({ work, className, ...props }) => (
   <Link
     className={cx('cursor-pointer', className)}
     to={`/work/${work.fields.slug}`}
