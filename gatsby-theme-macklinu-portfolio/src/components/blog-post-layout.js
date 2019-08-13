@@ -11,9 +11,9 @@ export default props => {
 
   return (
     <Layout>
-      <main className='container mx-auto px-4'>
-        <article className='max-w-lg mx-auto leading-normal'>
-          <Styled.h1>{title}</Styled.h1>
+      <main>
+        <Styled.h1>{title}</Styled.h1>
+        <article className='max-w-xl mx-auto leading-normal'>
           <p className='text-sm text-gray-600'>{date}</p>
           <Img className='my-4' fluid={bannerImage.childImageSharp.fluid} />
           <div className='py-4'>

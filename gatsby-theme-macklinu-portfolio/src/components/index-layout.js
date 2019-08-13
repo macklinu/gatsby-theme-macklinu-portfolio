@@ -6,42 +6,41 @@ import WorkCard from '../components/work-card'
 import Layout from './layout'
 import Hello from './hello'
 
+let CardRowContainer = props => (
+  <div className='flex flex-row -mx-2 mt-2 mb-4' {...props} />
+)
+
+let InlineLink = props => (
+  <Link
+    className='cursor-pointer text-base font-bold p-2 rounded hover:bg-gray-200 float-right'
+    {...props}
+  />
+)
+
 export default ({ data }) => {
   return (
     <Layout>
-      <>
-        <section>
-          <Hello />
-        </section>
-        <section className='py-8'>
-          <Styled.h3 className='mb-2'>featured work</Styled.h3>
-          <div className='flex flex-row -mx-2 mt-2 mb-4'>
-            {data.work.edges.map(({ node }) => (
-              <WorkCard className='w-1/3 px-2' work={node} />
-            ))}
-          </div>
-          <Link
-            className='cursor-pointer text-base font-bold p-2 rounded hover:bg-gray-200 float-right'
-            to='/work'
-          >
-            more projects →
-          </Link>
-        </section>
-        <section className='py-8'>
-          <Styled.h3 className='mb-2'>featured posts</Styled.h3>
-          <div className='flex flex-row -mx-2'>
-            {data.blog.edges.map(({ node }) => (
-              <PostCard className='w-1/3 px-2' post={node} />
-            ))}
-          </div>
-          <Link
-            className='cursor-pointer text-base font-bold p-2 rounded hover:bg-gray-200 float-right'
-            to='/blog'
-          >
-            more posts →
-          </Link>
-        </section>
-      </>
+      <section>
+        <Hello />
+      </section>
+      <section className='py-8'>
+        <Styled.h3 className='mb-2'>featured work</Styled.h3>
+        <CardRowContainer>
+          {data.work.edges.map(({ node }) => (
+            <WorkCard className='w-1/3 px-2' work={node} />
+          ))}
+        </CardRowContainer>
+        <InlineLink to='/work'>more projects →</InlineLink>
+      </section>
+      <section className='py-8'>
+        <Styled.h3 className='mb-2'>featured posts</Styled.h3>
+        <CardRowContainer>
+          {data.blog.edges.map(({ node }) => (
+            <PostCard className='w-1/3 px-2' post={node} />
+          ))}
+        </CardRowContainer>
+        <InlineLink to='/blog'>more posts →</InlineLink>
+      </section>
     </Layout>
   )
 }

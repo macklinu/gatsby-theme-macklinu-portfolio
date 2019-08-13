@@ -56,7 +56,7 @@ export default ({ children }) => {
   `)
   return (
     <>
-      <div className='container mx-auto px-4 flex flex-col min-h-screen'>
+      <div className='container mx-auto px-4 mb-4 flex flex-col min-h-screen'>
         <nav className='flex justify-between py-6'>
           <AvatarLink avatar={data.avatar} />
           <div className='mx-auto' />
@@ -66,7 +66,7 @@ export default ({ children }) => {
             <NavLink to='/work'>work</NavLink>
           </div>
         </nav>
-        {children}
+        <div className='container mx-auto px-2'>{children}</div>
       </div>
       <Footer />
     </>
