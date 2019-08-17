@@ -5,20 +5,21 @@ exports.createPages = ({ graphql, actions }) => {
 
   createPage({
     path: `/`,
-    component: require.resolve(`./src/components/index-layout.js`),
+    component: require.resolve(`./src/index-layout.js`),
   })
 
   createPage({
     path: `/blog`,
-    component: require.resolve(`./src/components/blog-layout.js`),
+    component: require.resolve(`./src/blog-layout.js`),
   })
 
   createPage({
     path: `/work`,
-    component: require.resolve(`./src/components/work-layout.js`),
+    component: require.resolve(`./src/work-layout.js`),
   })
 
-  let blogPost = require.resolve(`./src/components/blog-post-layout.js`)
+  let blogPost = require.resolve(`./src/blog-post-layout.js`)
+  let workPost = require.resolve(`./src/work-post-layout.js`)
   return graphql(
     `
       query {
@@ -79,7 +80,7 @@ exports.createPages = ({ graphql, actions }) => {
 
       createPage({
         path: `/blog${post.node.fields.slug}`,
-        component: blogPost,
+        component: workPost,
         context: {
           slug: post.node.fields.slug,
           previous,

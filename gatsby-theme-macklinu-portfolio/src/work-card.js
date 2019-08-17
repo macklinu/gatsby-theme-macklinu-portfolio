@@ -26,6 +26,7 @@ export const workCardFragment = graphql`
     }
     frontmatter {
       title
+      tech
       bannerImage {
         childImageSharp {
           fluid(maxWidth: 512) {

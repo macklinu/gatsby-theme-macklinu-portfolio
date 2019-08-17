@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { Styled } from '../lib/styled'
+import { Styled } from './styled'
 import Layout from './layout'
 
 export default props => {
@@ -29,18 +29,8 @@ export const pageQuery = graphql`
   query($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       id
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        bannerImage {
-          childImageSharp {
-            fluid(maxWidth: 512, traceSVG: { color: "#573ede" }) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
       body
+      ...PostCard
     }
   }
 `

@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import WorkCard from './work-card'
 import Layout from './layout'
-import { Styled } from '../lib/styled'
+import { Styled } from './styled'
 
 export default props => {
   let { edges } = props.data.allMdx
